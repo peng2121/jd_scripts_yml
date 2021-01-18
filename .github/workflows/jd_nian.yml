@@ -10,7 +10,7 @@ on:
   watch:
     types: started
   repository_dispatch:
-    types: jd_collectProduceScore
+    types: jd_nianCollect
 jobs:
   build:
 
@@ -37,7 +37,7 @@ jobs:
           npm install
       - name: '运行 【炸年兽领爆竹】'
         run: |
-          node jd_collectProduceScore.js
+          node jd_nianCollect.js
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
           JD_DEBUG: ${{ secrets.JD_DEBUG }}
