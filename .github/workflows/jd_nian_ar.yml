@@ -6,7 +6,7 @@ name: 炸年兽AR
 on:
   workflow_dispatch:
   schedule:
-    - cron: '20 6 * * *'
+    - cron: '20 22 * * *'
   watch:
     types: started
   repository_dispatch:
