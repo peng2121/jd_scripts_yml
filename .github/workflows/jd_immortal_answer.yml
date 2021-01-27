@@ -1,16 +1,16 @@
 # This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
-name: 赚京豆
+name: 神仙书院答题
 
 on:
   workflow_dispatch:
   schedule:
-    - cron: '15 23 * * *'
+    - cron: '20 22 * * *'
   watch:
     types: started
   repository_dispatch:
-    types: jd_syj
+    types: jd_immortal_answer
 jobs:
   build:
 
@@ -35,9 +35,9 @@ jobs:
       - name: npm install
         run: |
           npm install
-      - name: '运行 【赚京豆】'
+      - name: '运行 【神仙书院答题】'
         run: |
-          node jd_syj.js
+          node jd_immortal_answer.js
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
           JD_DEBUG: ${{ secrets.JD_DEBUG }}

@@ -1,16 +1,16 @@
 # This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
-name: 赚京豆
+name: 超级盒子
 
 on:
   workflow_dispatch:
   schedule:
-    - cron: '15 23 * * *'
+    - cron: '20 23 * * *'
   watch:
     types: started
   repository_dispatch:
-    types: jd_syj
+    types: jd_super_box
 jobs:
   build:
 
@@ -35,9 +35,9 @@ jobs:
       - name: npm install
         run: |
           npm install
-      - name: '运行 【赚京豆】'
+      - name: '运行 【超级盒子】'
         run: |
-          node jd_syj.js
+          node jd_super_box.js
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
           JD_DEBUG: ${{ secrets.JD_DEBUG }}
@@ -56,4 +56,5 @@ jobs:
           PUSH_PLUS_USER: ${{ secrets.PUSH_PLUS_USER }}
           TG_PROXY_HOST: ${{ secrets.TG_PROXY_HOST }}
           TG_PROXY_PORT: ${{ secrets.TG_PROXY_PORT }}
+          JDSUPERBOX_SHARECODES: ${{ secrets.JDSUPERBOX_SHARECODES }}
           
