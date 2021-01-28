@@ -6,7 +6,7 @@ name: 炸年兽签到任务🧨
 on:
   workflow_dispatch:
   schedule:
-    - cron: '20 22 * * *'
+    - cron: '20 17 * * *'
   watch:
     types: started
   repository_dispatch:
