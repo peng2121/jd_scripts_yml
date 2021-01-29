@@ -37,7 +37,7 @@ jobs:
           npm install
       - name: '运行 【5G狂欢城】'
         run: |
-          node jd_5.js
+          node jd_5g.js
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
           JD_DEBUG: ${{ secrets.JD_DEBUG }}
