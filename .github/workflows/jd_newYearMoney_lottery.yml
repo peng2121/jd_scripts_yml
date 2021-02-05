@@ -6,7 +6,7 @@ name: 压岁钱抢百元卡
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 1,4,8,12 * * *'
+    - cron: '45 0,3,7,11 * * *'
   watch:
     types: started
   repository_dispatch:
