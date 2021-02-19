@@ -6,7 +6,7 @@ name: 宠汪汪偷好友
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 16,22 * * *'
+    - cron: '10 1-22/3 * * *'
   watch:
     types: started
   repository_dispatch:
@@ -55,5 +55,4 @@ jobs:
           PUSH_PLUS_USER: ${{ secrets.PUSH_PLUS_USER }}
           TG_PROXY_HOST: ${{ secrets.TG_PROXY_HOST }}
           TG_PROXY_PORT: ${{ secrets.TG_PROXY_PORT }}
-          JOY_HELP_FEED: ${{ secrets.JOY_HELP_FEED }}
           
