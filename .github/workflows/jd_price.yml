@@ -1,16 +1,16 @@
 # This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
-name: 删除优惠券
+name: 价格保护
 
 on:
   workflow_dispatch:
   schedule:
-    - cron: '30 15 * * 6'
+    - cron: '5 0,10,16 * * *'
   watch:
     types: started
   repository_dispatch:
-    types: jd_delCoupon
+    types: jd_price
 jobs:
   build:
 
@@ -35,9 +35,9 @@ jobs:
       - name: npm install
         run: |
           npm install
-      - name: '运行 【删除优惠券】'
+      - name: '运行 【价格保护】'
         run: |
-          node jd_delCoupon.js
+          node jd_price.js
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
           JD_DEBUG: ${{ secrets.JD_DEBUG }}

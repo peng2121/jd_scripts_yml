@@ -37,7 +37,7 @@ jobs:
           npm install
       - name: '运行 【极速版红包】'
         run: |
-          node jd_speed_redpocke.js
+          node jd_speed_redpocket.js
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
           JD_DEBUG: ${{ secrets.JD_DEBUG }}
