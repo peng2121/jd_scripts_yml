@@ -56,4 +56,5 @@ jobs:
           TG_PROXY_HOST: ${{ secrets.TG_PROXY_HOST }}
           TG_PROXY_PORT: ${{ secrets.TG_PROXY_PORT }}
           JDCFD_SHARECODES: ${{ secrets.JDCFD_SHARECODES }}
+          CFD_NOTIFY_CONTROL: ${{ secrets.CFD_NOTIFY_CONTROL }}
           
