@@ -57,4 +57,5 @@ jobs:
           PUSH_PLUS_TOKEN: ${{ secrets.PUSH_PLUS_TOKEN }}
           PUSH_PLUS_USER: ${{ secrets.PUSH_PLUS_USER }}
           JD_CASH_SHARECODES: ${{ secrets.JD_CASH_SHARECODES }}
+          CASH_NOTIFY_CONTROL: ${{ secrets.CASH_NOTIFY_CONTROL }}
           
