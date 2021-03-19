@@ -1,16 +1,16 @@
 # This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
-name: 宠汪汪助力
+name: 5G超级盲盒
 
 on:
   workflow_dispatch:
   schedule:
-    - cron: '15 2 * * *'
+    - cron: '0 1-17/4,15,16 * * *'
   watch:
     types: started
   repository_dispatch:
-    types: jd_joy_run
+    types: jd_mohe
 jobs:
   build:
 
@@ -35,9 +35,9 @@ jobs:
       - name: npm install
         run: |
           npm install
-      - name: '运行 【宠汪汪助力】'
+      - name: '运行 【5G超级盲盒】'
         run: |
-          node jd_joy_run.js
+          node jd_mohe.js
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
           JD_DEBUG: ${{ secrets.JD_DEBUG }}
@@ -56,5 +56,4 @@ jobs:
           IGOT_PUSH_KEY: ${{ secrets.IGOT_PUSH_KEY }}
           PUSH_PLUS_TOKEN: ${{ secrets.PUSH_PLUS_TOKEN }}
           PUSH_PLUS_USER: ${{ secrets.PUSH_PLUS_USER }}
-          JOY_RUN_HELP_MYSELF: ${{ secrets.JOY_RUN_HELP_MYSELF }}
           
