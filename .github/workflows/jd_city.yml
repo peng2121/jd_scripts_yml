@@ -57,4 +57,5 @@ jobs:
           PUSH_PLUS_TOKEN: ${{ secrets.PUSH_PLUS_TOKEN }}
           PUSH_PLUS_USER: ${{ secrets.PUSH_PLUS_USER }}
           CITY_SHARECODES: ${{ secrets.CITY_SHARECODES }}
+          JD_CITY_EXCHANGE: ${{ secrets.JD_CITY_EXCHANGE }}
           
