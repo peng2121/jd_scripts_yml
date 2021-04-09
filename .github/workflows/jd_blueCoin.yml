@@ -6,7 +6,7 @@ name: 东东超市兑换
 on:
   workflow_dispatch:
   schedule:
-    - cron: '48 15 * * *'
+    - cron: '49 15 * * *'
   watch:
     types: started
   repository_dispatch:
