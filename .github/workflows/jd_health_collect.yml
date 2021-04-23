@@ -6,7 +6,7 @@ name: 健康社区收集能量
 on:
   workflow_dispatch:
   schedule:
-    - cron: '7,27 * * * *'
+    - cron: '3,33 * * * *'
   watch:
     types: started
   repository_dispatch:
