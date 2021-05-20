@@ -1,16 +1,16 @@
 # This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
-name: 球队赢好礼
+name: 超级直播间红包雨
 
 on:
   workflow_dispatch:
   schedule:
-    - cron: '12 8 * * *'
+    - cron: '12 12 * * *'
   watch:
     types: started
   repository_dispatch:
-    types: jd_tcl
+    types: jd_live_redrain
 jobs:
   build:
 
@@ -35,9 +35,9 @@ jobs:
       - name: npm install
         run: |
           npm install
-      - name: '运行 【球队赢好礼】'
+      - name: '运行 【超级直播间红包雨】'
         run: |
-          node jd_tcl.js
+          node jd_live_redrain.js
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
           JD_DEBUG: ${{ secrets.JD_DEBUG }}
@@ -56,5 +56,4 @@ jobs:
           IGOT_PUSH_KEY: ${{ secrets.IGOT_PUSH_KEY }}
           PUSH_PLUS_TOKEN: ${{ secrets.PUSH_PLUS_TOKEN }}
           PUSH_PLUS_USER: ${{ secrets.PUSH_PLUS_USER }}
-          PURCHASE_SHOPS: ${{ secrets.PURCHASE_SHOPS }}
           

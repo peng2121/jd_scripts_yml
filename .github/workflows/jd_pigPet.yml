@@ -6,7 +6,7 @@ name: 金融养猪
 on:
   workflow_dispatch:
   schedule:
-    - cron: '12 */3 * * *'
+    - cron: '12 4,10,16,22 * * *'
   watch:
     types: [started]
   repository_dispatch:
