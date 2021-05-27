@@ -10,7 +10,7 @@ on:
   watch:
     types: started
   repository_dispatch:
-    types: 家电星推官
+    types: jd_xtg
 jobs:
   build:
 
@@ -35,7 +35,7 @@ jobs:
       - name: npm install
         run: |
           npm install
-      - name: '运行 【jd_xtg】'
+      - name: '运行 【家电星推官】'
         run: |
           node jd_xtg.js
         env:
